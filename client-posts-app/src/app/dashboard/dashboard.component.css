@@ -1,0 +1,51 @@
+
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+.row {
+    margin: 25px;
+    border: 1px solid lightgray;
+    font-family: monospace;
+    background-color: rgba(240, 240, 240, 0.75);
+}
+.panel-body header {
+    padding-top: 0.75rem;
+    color: slateblue;
+}
+hr {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+.panel .panel-heading {
+  padding: 4px 15px;
+  position: absolute;
+  border:none;
+  border-top-right-radius:0px;
+  top: 1px;
+}
+.panel .panel-heading.right {
+  border-right-width: 0px;
+  border-top-left-radius:0px;
+  right: 16px;
+}
+.panel .panel-heading .panel-body {
+  padding-top: 6px;
+}
+figcaption {
+  word-wrap: break-word;
+}
+.comment-post {
+  margin-top: 10px;
+}
+.comment-post p {
+    margin-bottom: 0.5rem;
+}
+.comment-post .post-title {
+    text-align: center;
+    font-size: 20px;
+    color: tomato; 
+}
+.comment-post .post-text {
+    font-family: cursive;
+}
+.input-group-btn .btn-sm {
+    padding: 0.5rem 0.5rem;
+}

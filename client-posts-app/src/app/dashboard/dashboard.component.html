@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row"*ngFor="let post of posts">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <header class="">
+            <div class="comment-user"><i class="fa fa-user"></i> {{post._creator.username}}</div>
+            <time class="comment-date" datetime=""><i class="fa fa-clock-o"></i> {{post.createdAt}}</time>
+          </header>
+          <hr>
+          <div class="comment-post">
+            <p class="post-title">{{post.title}}</p>
+            <p class="post-text">{{post.text}}</p>
+          </div>
+          <p class="text-right"><a href="#" class="btn btn-info btn-sm"><i class=""></i> comment</a></p>
+        </div>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="input-group">
+      <input type="text" id="userPostTitle" class="form-control input-sm chat-input" placeholder="Write your post title here..." />
+      <input type="text" id="userPostText" class="form-control input-sm chat-input" placeholder="Write your post here..." />
+    <span class="input-group-btn" (click)="addPost($event)">     
+          <button class="btn btn-success btn-sm"><span class="glyphicon glyphicon-comment"></span> Add Post</button>
+      </span>
+  </div>
+  </div>
+</div>
