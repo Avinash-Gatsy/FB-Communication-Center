@@ -3,8 +3,14 @@
 .row {
     margin: 25px;
     border: 1px solid lightgray;
+    border-radius: 15px;
     font-family: monospace;
     background-color: rgba(240, 240, 240, 0.75);
+    box-shadow: 0 4px 8px 0 rgba(108, 148, 235, 0.055), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+}
+.textBox {
+    box-shadow: none !important;
+    border-radius: 0px !important;
 }
 .panel-body header {
     padding-top: 0.75rem;
@@ -45,7 +51,31 @@ figcaption {
 }
 .comment-post .post-text {
     font-family: cursive;
+    text-align: center;
 }
 .input-group-btn .btn-sm {
     padding: 0.5rem 0.5rem;
+}
+.panel-body p {
+    margin-bottom: 0.5rem;
+}
+.comment-section {
+    margin-bottom: 15px;
+}
+.me{
+    font-size: 14px;
+    margin: 3px;
+    border-left: 3px solid #60DF88 !important;
+    padding: 3px;
+    padding-right: 5px;
+    background-color: rgb(239, 255, 241);
+}
+
+.others{
+    font-size: 14px;
+    margin: 3px;
+    border-right: 3px solid rgb(255, 112, 0) !important;
+    padding: 3px;
+    padding-left:5px;
+    background-color: rgb(247, 247, 214);
 }

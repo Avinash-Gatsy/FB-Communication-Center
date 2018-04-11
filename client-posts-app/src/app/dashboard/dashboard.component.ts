@@ -35,9 +35,12 @@ export class DashboardComponent implements OnInit {
         title: postTitle,
         text: postText
       }).subscribe((res) => {
-        console.log(res);
-        console.log(res['success']);
-        this.getAllPosts();
+        // console.log(res);
+        if (res['success']) {
+          this.getAllPosts();
+          (document.getElementById('userPostTitle')as HTMLInputElement).value = '';
+          (document.getElementById('userPostText')as HTMLInputElement).value = '';
+        }
     }, (err) => {
       console.log(err);
       });
