@@ -12,8 +12,19 @@
             <p class="post-title">{{post.title}}</p>
             <p class="post-text">{{post.text}}</p>
           </div>
-          <p class="text-right comment-btn"><button class="btn btn-info btn-sm"><i class=""></i> comment</button></p>
-        </div>
+          <!--<div class="textBox">
+            <div class="input-group">
+                <input type="text" class="form-control input-xs chat-input" name="" id="" placeholder="add your comment">
+                <p class="text-right comment-btn"><button class="btn btn-info btn-sm"><i class=""></i> comment</button></p> 
+            </div>
+          </div>-->
+          <div class="input-group">
+              <input type="text" class="form-control" id ="commentText" placeholder="add your comment">
+              <span class="input-group-btn">
+                   <button class="btn btn-info" type="button" (click)="addComment(post._id)"><i>comment</i></button>
+              </span>
+           </div>
+          </div>
         </div>
       </div>
       <div *ngIf="post._comments !== ''" class="col-md-12 comment-section">
@@ -30,7 +41,7 @@
     <div class="input-group">
       <input type="text" id="userPostTitle" class="form-control input-sm chat-input" placeholder="Write your post title here..." />
       <input type="text" id="userPostText" class="form-control input-sm chat-input" placeholder="Write your post here..." />
-    <span class="input-group-btn" (click)="addPost($event)">     
+      <span class="input-group-btn" (click)="addPost($event)">     
           <button class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-comment"></span> Add Post</button>
       </span>
   </div>

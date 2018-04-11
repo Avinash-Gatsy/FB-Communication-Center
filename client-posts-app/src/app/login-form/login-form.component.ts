@@ -9,7 +9,6 @@ import { UserService } from '../user.service';
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent implements OnInit {
-
   constructor(private http: HttpClient, private router: Router, private user: UserService) { }
 
   ngOnInit() {
