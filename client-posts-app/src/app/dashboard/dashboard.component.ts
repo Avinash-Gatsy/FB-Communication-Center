@@ -59,7 +59,7 @@ export class DashboardComponent implements OnInit {
     }
   }
   addComment(postId) {
-    const commentText = (document.getElementById('commentText')as HTMLInputElement).value;
+    const commentText = (document.getElementById(postId)as HTMLInputElement).value;
     if (commentText !== '' && this.user.getUserId() !== undefined) {
       const postComment = this.http.post('http://localhost:3000/api/comment', {
         text: commentText,
@@ -69,7 +69,7 @@ export class DashboardComponent implements OnInit {
         if (res['success']) {
           this.socket.emit('comment', res);
           // this.getAllPosts();
-          (document.getElementById('commentText')as HTMLInputElement).value = '';
+          (document.getElementById(postId)as HTMLInputElement).value = '';
         }
       }, (err) => {
         console.log(err);
