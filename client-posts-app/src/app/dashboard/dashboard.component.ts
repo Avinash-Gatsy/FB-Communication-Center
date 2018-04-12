@@ -28,6 +28,9 @@ export class DashboardComponent implements OnInit {
   getAllPosts() {
     this.http.get('http://localhost:3000/api/posts').subscribe((data) => {
       this.posts = data['data'];
+      this.posts.forEach((post) => {
+        post['currentUsername'] = this.user.getUsername();
+      });
       console.log(this.posts);
     },
     (err) => {
